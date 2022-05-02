@@ -1,5 +1,5 @@
 <hr>
-<h1>Vivero El Otoño</h1>
+<h1 class="title">Vivero El Otoño</h1>
 <hr>
 
 
@@ -8,14 +8,14 @@
     <table class="table">
         <thead class="table-dark">
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nombre comun</th>
-                <th scope="col">Tipo</th>
-                <th scope="col">Clima</th>
+                <th id="number" scope="col">#</th>
+                <th id="name" scope="col">Nombre comun</th>
+                <th id="type" scope="col">Tipo</th>
+                <th id="climate" scope="col">Clima</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let plant of plants">
+            <tr id={{plant.nombre_comun}} *ngFor="let plant of plants">
                 <th scope="row">{{ plant.id }}</th>
                 <td>{{ plant.nombre_comun }}</td>
                 <td>{{ plant.tipo }}</td>
@@ -24,3 +24,5 @@
         </tbody>
     </table>
 </div>
+<p>Total plantas interior: {{interiorPlants}}</p>
+<p>Total plantas exterior: {{exteriorPlants}}</p>
